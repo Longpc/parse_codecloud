@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "seekingproject"
+    },
+    "seekingproject": {
+      "applicationId": "gjVNgNFG8o64fxF8fmpMuabRjuhPTrUaJ4UEvK0f"
+    }
+  }
+}
