@@ -2,12 +2,9 @@
 Parse.Cloud.beforeSave("Typesrecordaction", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Typesrecordaction");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -42,7 +39,6 @@ Parse.Cloud.beforeSave("_User", function(request, response) {
     var column1 = "seq";
     var column2 = "idfacebook";
     var errorMsg = column1 + " or "+ column2 + " already exists. ";
-    
     var reqcolumn1 = request.object.get(column1);
     var reqcolumn2 = request.object.get(column2);
     var query1 = new Parse.Query("_User");  // QUERY 1
@@ -57,7 +53,6 @@ Parse.Cloud.beforeSave("_User", function(request, response) {
     }
     compoundQuery.find({
         success: function(objects) {
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -91,12 +86,9 @@ Parse.Cloud.beforeSave("_User", function(request, response) {
 Parse.Cloud.beforeSave("Tokens", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Tokens");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -129,12 +121,9 @@ Parse.Cloud.beforeSave("Tokens", function(request, response) {
 Parse.Cloud.beforeSave("Attributesuser", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Attributesuser");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -167,12 +156,9 @@ Parse.Cloud.beforeSave("Attributesuser", function(request, response) {
 Parse.Cloud.beforeSave("Attributes", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Attributes");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -205,12 +191,9 @@ Parse.Cloud.beforeSave("Attributes", function(request, response) {
 Parse.Cloud.beforeSave("Companies", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Companies");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -243,12 +226,9 @@ Parse.Cloud.beforeSave("Companies", function(request, response) {
 Parse.Cloud.beforeSave("Attributescompany", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Attributescompany");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -281,12 +261,9 @@ Parse.Cloud.beforeSave("Attributescompany", function(request, response) {
 Parse.Cloud.beforeSave("Attributessecond", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Attributessecond");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -319,12 +296,9 @@ Parse.Cloud.beforeSave("Attributessecond", function(request, response) {
 Parse.Cloud.beforeSave("Rooms", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Rooms");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -357,12 +331,9 @@ Parse.Cloud.beforeSave("Rooms", function(request, response) {
 Parse.Cloud.beforeSave("Messages", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Messages");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -395,12 +366,9 @@ Parse.Cloud.beforeSave("Messages", function(request, response) {
 Parse.Cloud.beforeSave("Typescontent", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Typescontent");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -433,12 +401,9 @@ Parse.Cloud.beforeSave("Typescontent", function(request, response) {
 Parse.Cloud.beforeSave("Groups", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Groups");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
@@ -471,12 +436,9 @@ Parse.Cloud.beforeSave("Groups", function(request, response) {
 Parse.Cloud.beforeSave("Usersgroup", function(request, response) {
     var column = "seq";
     var query = new Parse.Query("Usersgroup");
-    console.log(request);
     query.equalTo(column, request.object.get(column));
     query.find({
         success: function(objects) {
-            console.log(request.object.id);
-            console.log(request.object.isNew());
             if(request.object.isNew() == false) {
                 if(objects.length < 1) {
                     response.success();
